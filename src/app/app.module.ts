@@ -8,6 +8,7 @@ import { RecurseVisitor } from '@angular/compiler/src/i18n/i18n_ast';
 import { RecipieDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import {RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
     RecipieListComponent,
     RecipieDetailComponent,
     RecipeItemComponent,
-    ShoppingListComponent
+    ShoppingListComponent,
+    ShoppingEditComponent
   ],
   imports: [
     BrowserModule

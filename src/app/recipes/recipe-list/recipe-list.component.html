@@ -1,1 +1,20 @@
-<h1>Recipe-list component</h1>
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success">New recipie</button>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-xs-12">
+            <a href="#" class="list-group-item clearfix" *ngFor="let recipe of  recipes">
+                <div class="pull-left">
+                    <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+                    <p class="list-group-itme-text">{{ recipe.description}}</p>
+                </div>
+                <span class="pull-right">
+                    <img src="{{ recipe.imagePath}}" alt="" class="img-responsive" style="max-height: 50px">
+                </span>
+            </a>
+            <app-recipie-item></app-recipie-item>
+        </div>
+    </div>
+</div>
