@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector:'app-recipieDetail',
+    selector:'app-recipie-detail',
     templateUrl:'./recipe-detail.component.html'
 })
 export class RecipieDetailComponent{
