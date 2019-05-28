@@ -10,7 +10,7 @@
         <app-recipie-item 
         *ngFor="let recipeEL of recipes"
         [recipie]="recipeEL"
-        (click)="onRecipieDetail()"
+        (recipieSelected)="onRecipieSelected(recipeEL)"
         ></app-recipie-item>
     </div>
 </div>
