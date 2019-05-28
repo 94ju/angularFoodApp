@@ -13,6 +13,10 @@ export class RecipieListComponent{
     
     ];   
     constructor(){}
+    onRecipieDetail(){
+        alert('Check');
+        console.log('check');
+    }
     ngOnInit(){
 
     }
