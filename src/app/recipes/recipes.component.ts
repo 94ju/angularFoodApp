@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Recipie } from './recipe.model';
 import { RecipieService } from './recipie.service';
 
@@ -9,10 +9,19 @@ import { RecipieService } from './recipie.service';
     providers:[RecipieService]
 })
 
-export class RecipiesComponent{
+export class RecipiesComponent implements OnInit{
     selectedRecipie : Recipie;
-    onRecipieDetail(event){
-        console.log(event);
-        alert(event);
+    constructor(private recipieService:RecipieService){}
+
+    ngOnInit(){
+        this.recipieService.recipieSelected.subscribe(
+            (recipie:Recipie)=>{
+                this.selectedRecipie=recipie;
+            }
+        )
     }
+    // onRecipieDetail(event){
+    //     console.log(event);
+    //     alert(event);
+    // }
 }
