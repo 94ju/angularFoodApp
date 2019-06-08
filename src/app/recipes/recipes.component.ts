@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { Recipie } from './recipe.model';
+import { RecipieService } from './recipie.service';
 
 
 @Component({
     selector:'app-recipes',
-    templateUrl:'./recipes.component.html'
+    templateUrl:'./recipes.component.html',
+    providers:[RecipieService]
 })
 
 export class RecipiesComponent{

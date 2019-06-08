@@ -28,7 +28,7 @@ import { RecipieService } from './recipes/recipie.service';
   imports: [
     BrowserModule
   ],
-  providers:[ShoppingListService,RecipieService],
+  providers:[ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
