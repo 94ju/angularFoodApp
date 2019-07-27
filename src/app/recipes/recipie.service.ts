@@ -1,8 +1,10 @@
 import { Recipie } from './recipe.model';
-import { EventEmitter } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Ingredients } from '../shared/ingredients.model';
-
+import { ShoppingListService } from '../shopping-list/shopping-list.service';
+@Injectable()
 export class RecipieService{
+    constructor(private slService:ShoppingListService){}
     recipieSelected =new EventEmitter<Recipie>();
     recipes : Recipie[] =[
         new Recipie('Pizza1',
@@ -35,5 +37,7 @@ export class RecipieService{
     getRecipies(){
         return this.recipes.slice();
     }
-    
+    addIngredientsToShoppingList(ingredients:Ingredients[]){
+        this.slService.addIngredients(ingredients);
+    }
 }
